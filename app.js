@@ -1,3 +1,10 @@
 var hej2 = 'hej';
-var hej = hej2 + ' ' + 'med dig';
-console.log(hej);
+var hej = [hej2, 'med dig'];
+var navn = 'Jgitonas';
+var alder = 19;
+var dag = 17;
+var month = 'nov';
+var year = 1997;
+var føde = 'Helsingør';
+console.log(hej[0] + ' ' + hej[1] + ' ' + navn + '. du er ' + alder + ' år,' + ' hvilket er ' + ( alder * 12) + ' måneder');
+console.log('eller ' + ((alder * 12) * 365) + ' dage, du er født i ' + føde + ' den. ' + dag + '/' + month + '/' + year + ' hvilket er ' + (((((alder * 12) * 365)*24)*60)*60) + ' sekunder siden');
