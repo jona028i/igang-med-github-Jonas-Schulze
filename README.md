@@ -1,6 +1,6 @@
 # igang-med-github-Jonas-Schulze
 
-#Betingelser!
+# Betingelser!
 Betingelser er krav der skal opfyldes før et stykke kode bliver kørt.
 F.eks. Er din yngligs drik vand eller brød?
 
