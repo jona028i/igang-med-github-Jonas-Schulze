@@ -1,4 +1,4 @@
-# igang-med-github-Jonas-Schulze
+Dette er noget som skal bruges?
 
 # Betingelser!
 Betingelser er krav der skal opfyldes før et stykke kode bliver kørt.
