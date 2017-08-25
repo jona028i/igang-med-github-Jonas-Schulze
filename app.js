@@ -1,6 +1,6 @@
 var hej2 = 'hej';
 var hej = [hej2, 'med dig'];
-var navn = 'Jgitonas';
+var navn = 'Jonas';
 var alder = 19;
 var dag = 17;
 var month = 'nov';

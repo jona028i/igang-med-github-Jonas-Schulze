@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Test</title>
+</head>
+<style type="text/css">
+
+    td{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+</style>
+<body onload="wake()">
+
+    <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
+
+
+    
+</body>
+
+<script>
+var boxes = document.getElementsByTagName('td');
+var clicks = 0;
+var x = 'X';
+var o = 'O';
+var player1 = prompt('Player O?');
+var player2 = prompt('Player X?');
+
+    function wake(){
+        
+        
+        for (var i = 0; i < boxes.length; i++){
+            if (i >= 9){alert('error!');}
+            if(i % 2 == 0){
+                boxes[i].style.backgroundColor = '#d7d7d7';
+            } else {
+                boxes[i].style.backgroundColor = '#9b9b9b';
+            }
+            boxes[i].addEventListener('click', function(){
+                if (boxes[1 - 1].innerHTML == x && boxes[4 - 1].innerHTML == x && boxes[7 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[2 - 1].innerHTML == x && boxes[5 - 1].innerHTML == x && boxes[8 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[3 - 1].innerHTML == x && boxes[6 - 1].innerHTML == x && boxes[9 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[1 - 1].innerHTML == x && boxes[5 - 1].innerHTML == x && boxes[9 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[3 - 1].innerHTML == x && boxes[5 - 1].innerHTML == x && boxes[7 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[1 - 1].innerHTML == x && boxes[2 - 1].innerHTML == x && boxes[3 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[4 - 1].innerHTML == x && boxes[5 - 1].innerHTML == x && boxes[6 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } else if (boxes[7 - 1].innerHTML == x && boxes[8 - 1].innerHTML == x && boxes[9 - 1].innerHTML == x){
+                    alert(player2 + ' Wins!');
+                    location.reload();
+                } 
+
+                if (boxes[1 - 1].innerHTML == o && boxes[4 - 1].innerHTML == o && boxes[7 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[2 - 1].innerHTML == o && boxes[5 - 1].innerHTML == o && boxes[8 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[3 - 1].innerHTML == o && boxes[6 - 1].innerHTML == o && boxes[9 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[1 - 1].innerHTML == o && boxes[5 - 1].innerHTML == o && boxes[9 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[3 - 1].innerHTML == o && boxes[5 - 1].innerHTML == o && boxes[7 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[1 - 1].innerHTML == o && boxes[2 - 1].innerHTML == o && boxes[3 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[4 - 1].innerHTML == o && boxes[5 - 1].innerHTML == o && boxes[6 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } else if (boxes[7 - 1].innerHTML == o && boxes[8 - 1].innerHTML == o && boxes[9 - 1].innerHTML == o){
+                    alert(player1 + ' Wins!');
+                    location.reload();
+                } 
+
+            });
+        }
+        for (var l = 0; l < boxes.length; l++){
+            //Code below in here when you know how..
+        }
+        boxes[0].addEventListener('mousedown', function(e){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[0].innerHTML = x;
+                } else {
+                    boxes[0].innerHTML = o;
+                }
+        });
+
+        boxes[1].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[1].innerHTML = x;
+                } else {
+                    boxes[1].innerHTML = o;
+                }
+        });
+        boxes[2].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[2].innerHTML = x;
+                } else {
+                    boxes[2].innerHTML = o;
+                }
+        });
+        boxes[3].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[3].innerHTML = x;
+                } else {
+                    boxes[3].innerHTML = o;
+                }
+        });
+        boxes[4].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[4].innerHTML = x;
+                } else {
+                    boxes[4].innerHTML = o;
+                }
+        });
+        boxes[5].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[5].innerHTML = x;
+                } else {
+                    boxes[5].innerHTML = o;
+                }
+        });
+        boxes[6].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[6].innerHTML = x;
+                } else {
+                    boxes[6].innerHTML = o;
+                }
+        });
+        boxes[7].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[7].innerHTML = x;
+                } else {
+                    boxes[7].innerHTML = o;
+                }
+        });
+        boxes[8].addEventListener('mousedown', function(){
+                clicks ++;
+                if (clicks % 2 == 0){
+                    boxes[8].innerHTML = x;
+                } else {
+                    boxes[8].innerHTML = o;
+                }
+        });
+
+
+    }
+
+
+
+
+</script>
+</html>

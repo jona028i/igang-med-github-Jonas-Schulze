@@ -1,0 +1,23 @@
+{
+  "name": "jonas_server",
+  "version": "10.12.68",
+  "description": "dette er en server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jona028i/igang-med-github-Jonas-Schulze.git"
+  },
+  "author": "jonas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jona028i/igang-med-github-Jonas-Schulze/issues"
+  },
+  "homepage": "https://github.com/jona028i/igang-med-github-Jonas-Schulze#readme",
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

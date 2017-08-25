@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fetch</title>
+</head>
+<body>
+    
+    <article id="content">Fetching Data!</article>
+
+</body>
+<script>
+    fetch('https://swapi.co/api/people/')
+    .then((response) => {
+        if (response.status == 200){   
+            content.innerHTML = '';
+            return response.json();
+        } else{
+            content.innerHTML = 'Json Error!';
+        }
+    
+    })
+    .then((json) => {
+    var content = document.getElementById('content');
+    for (var i = 0; i < json.results.length; i++){    
+        content.innerHTML += '<h1 style="color:cadetblue">Name: ' + json.results[i].name + '</h1>';
+        content.innerHTML += '<h2>Height: ' + json.results[i].height + '</h2>';
+        content.innerHTML += '<h2>Weight: ' + json.results[i].mass + '</h2>';
+        content.innerHTML += '<h3>Eye Color: ' + json.results[i].eye_color + '</h3>';
+        content.innerHTML += '<h3>Gender: ' + json.results[i].gender + '</h3>';
+        content.innerHTML += '<br><hr><br>';
+    }
+    })
+    .catch(errorMessage => {
+   console.log(errorMessage);
+    });
+</script>
+</html>

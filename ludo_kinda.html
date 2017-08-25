@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ludo</title>
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+    }
+    body{
+        background-color: #b3b3b3;
+    }
+    table{
+        float: left;
+    }
+    td {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+    div {
+        width: 45%;
+        margin: 0;
+        float: right;
+    }
+    #dice{
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 5px;
+        border: 1px solid;
+        background-color: #fff;
+        outline: none;
+    }
+</style>
+
+<body onload="wake()" id="body">
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <div>
+        <h1>Kinda Ludo</h1>
+        <h2 id="eyes"></h2>
+        <p id="info">
+            <strong>Spillere: 2</strong><br>
+            Spillerene slår på tur.<br>
+            Spiller 1 starter.<br>
+            Lander din "brik" på et <strong style="color:green">grønt</strong> felt, rykker du <strong>3</strong> felter frem.<br>
+            Lander din "brik" på et <strong style="color:brown">brunt</strong> felt, rykker du <strong>2</strong> felt tilbage.<br>
+            Lander din "brik" på et <strong style="color:purple">lilla</strong> felt, skal du svare på et simplet<br>
+            regnestykke, svare du rigtigt, rykker du <strong>5</strong> felter frem<br>
+            svare du forkert rykker du <strong>5</strong> felter <strong>tilbage.</strong><br>
+            Lander din brik på modstanderens, rykker modstanderen <strong>5</strong> felter <strong>tilbage</strong><br>
+            <br>
+            Svare du rigtigt på dine matematik spørgsmål<br>
+            eller slår modstanderen tilbage får du <strong>1</strong> point.<br>
+            <br>
+            Spillet slutter når en spiller når det sidste røde felt.<br>
+            <strong>Spilleren med flest point vinder.</strong>
+        </p>
+        <p id="turn"></p>
+        <p id="XS">X Score:</p>
+        <p id="OS">O Score:</p>
+        <button onclick="roll()" id="dice">Start!</button>
+    </div>
+</body>
+<script>
+    var boxes = document.getElementsByTagName('td');
+    var dice = document.getElementById('dice');
+    var XS = document.getElementById('XS');
+    var OS = document.getElementById('OS');
+    var turnText = document.getElementById('turn');
+    var body = document.getElementById('body');
+    var eyes = 0;
+    var turn = 0;
+    var x = 'X';
+    var xScore = 0;
+    var o = 'O';
+    var oScore = 0;
+    var tempValueX = 0;
+    var tempValueO = 0;
+    var p1 = prompt('Spiller 1');
+    var p2 = prompt('Spiller 2');
+    var green = false;
+    var brown = false;
+    var purple = false;
+
+    function wake() {
+        p1.replace(/\b\w/g, l => l.toUpperCase());
+        p2.replace(/\b\w/g, l => l.toUpperCase());
+        for (var i = 0; i < boxes.length; i++) {
+            if (i % 2 == 0) {
+                boxes[i].style.backgroundColor = 'cadetblue';
+            } else {
+                boxes[i].style.backgroundColor = '#d7d7d7';
+            }
+
+            if (i % 4 == 0) {
+                boxes[Math.floor((Math.random() * 246) + 1)].style.backgroundColor = 'green';
+                boxes[Math.floor((Math.random() * 246) + 1)].style.backgroundColor = 'brown';
+            }
+            if (i % 3 == 0){
+                boxes[Math.floor((Math.random() * 246) + 1)].style.backgroundColor = 'purple';
+            }
+
+            boxes[0].style.backgroundColor = 'red';
+            boxes[boxes.length - 1].style.backgroundColor = 'red';
+        }
+    }
+
+    function roll() {
+
+        eyes = Math.floor((Math.random() * 6) + 1);
+        dice.innerHTML = eyes;
+
+        if (turn % 2 == 0) {
+            turnText.innerHTML = "<strong>" + p1 + "</strong>" + " slog en " + "<strong>" + eyes + "</strong>" + "'er"; 
+            turn++;
+
+            if (boxes[(tempValueX)].innerHTML == x) {
+                boxes[(tempValueX)].innerHTML = '';
+            }
+
+            if (boxes[(tempValueX + eyes)].style.backgroundColor == 'brown') {
+                eyes-=2;
+            } else if (boxes[(tempValueX + eyes)].style.backgroundColor == 'green') {
+                eyes+=3;
+            } else if (boxes[(tempValueX + eyes)].style.backgroundColor == 'purple') {
+                var n1 = Math.floor((Math.random() * 3500) + 1);
+                var n2 = Math.floor((Math.random() * 3500) + 1);
+                if (p1 != 'bot'){
+                    var q = prompt('hvad er ' + n1 + '+' + n2 + '?');
+                } else {
+                    if (turn % Math.floor((Math.random() * 5) + 1) == 0){
+                        var tempN1 = n1 + Math.floor((Math.random() * 1750) + 1);
+                    } else {
+                        tempN1 = n1;
+                    }
+                    q = tempN1 + n2;
+                }
+                if (q == n1 + n2){
+                    eyes += 5;
+                    xScore ++;
+                    boxes[(tempValueX + eyes)].innerHTML = x;
+                    boxes[(tempValueX)].innerHTML = '';
+                } else {
+                    eyes -= 5;
+                    boxes[(tempValueX + eyes)].innerHTML = x;
+                    boxes[(tempValueX)].innerHTML = '';
+                }
+            }
+
+            if (boxes[(tempValueX + eyes)].innerHTML == o) {
+                xScore++;
+                tempValueO -= 5;
+                boxes[(tempValueO)].innerHTML = o;
+                boxes[(tempValueX + eyes)].innerHTML = x;
+            } else {
+                boxes[(tempValueX + eyes)].innerHTML = x;
+            }
+            if (p2 == 'bot'){
+                setTimeout(roll, Math.floor((Math.random() * 1500) + 600));
+            }
+
+        } else {
+            turnText.innerHTML = "<strong>" + p2 + "</strong>" + " slog en " + "<strong>" + eyes + "</strong>" + "'er"; 
+            turn++;
+
+            if (boxes[(tempValueO)].innerHTML == o) {
+                boxes[(tempValueO)].innerHTML = '';
+            }
+            if (boxes[(tempValueO + eyes)].style.backgroundColor == 'brown') {
+                eyes-=2;
+            } else if (boxes[(tempValueO + eyes)].style.backgroundColor == 'green') {
+                eyes+=3;
+            } else if (boxes[(tempValueO + eyes)].style.backgroundColor == 'purple') {
+                var n1 = Math.floor((Math.random() * 3500) + 1);
+                var n2 = Math.floor((Math.random() * 3500) + 1);
+                if (p2 != 'bot'){
+                    var q = prompt('hvad er ' + n1 + '+' + n2 + '?');
+                } else {
+                    if (turn % Math.floor((Math.random() * 5) + 1) == 0){
+                        var tempN2 = n1 + Math.floor((Math.random() * 1750) + 1);
+                    } else {
+                        tempN2 = n1;
+                    }
+                    q = tempN2 + n2;
+                }
+                if (q == n1 + n2){
+                    eyes += 5;
+                    oScore ++;
+                    boxes[(tempValueO + eyes)].innerHTML = o;
+                    boxes[(tempValueO)].innerHTML = '';
+                } else {
+                    eyes -= 5;
+                    boxes[(tempValueO + eyes)].innerHTML = o;
+                    boxes[(tempValueO)].innerHTML = '';
+                }
+            }
+            if (boxes[(tempValueO + eyes)].innerHTML == x) {
+                oScore++;
+                tempValueX -= 5;
+                boxes[(tempValueX)].innerHTML = x;
+                boxes[(tempValueO + eyes)].innerHTML = o;
+            } else {
+                boxes[(tempValueO + eyes)].innerHTML = o;
+            }
+
+            if (p1 == 'bot'){
+                setTimeout(roll, Math.floor((Math.random() * 1500) + 600));
+            }
+        }
+        for (var i = 0; i < boxes.length; i++) {
+            if (boxes[i].innerHTML == x) {
+                tempValueX = i;
+            } else if (boxes[i].innerHTML == o) {
+                tempValueO = i;
+            }
+        }
+        if (tempValueO + eyes >= (boxes.length) ||tempValueX + eyes >= (boxes.length)) {
+            if (xScore > oScore){
+                alert (p1 + ' vandt!');
+                location.reload();
+            } else {
+                alert (p2 + ' vandt!');
+                location.reload();
+            }
+        }
+
+        XS.innerHTML = p1 + ' Point: ' + xScore + ' X';
+        OS.innerHTML = p2 + ' Point: ' + oScore + ' O';
+    }
+</script>
+
+</html>
