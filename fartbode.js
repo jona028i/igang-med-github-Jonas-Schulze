@@ -53,4 +53,4 @@ function fart(fartG, hastighed, veja){
     }
 }
 
-fart(120, 154,false);
+fart(80, 154,false);

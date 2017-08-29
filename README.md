@@ -1,6 +1,6 @@
-Dette er noget som skal bruges?
+# Dette er noget som skal bruges?
 
-# Betingelser!
+## Betingelser!
 Betingelser er krav der skal opfyldes før et stykke kode bliver kørt.
 F.eks. Er din yngligs drik vand eller brød?
 
@@ -14,7 +14,7 @@ alert('hvad fejler du?');
 alert('mhh')
 }
 
-# Operatorer
+## Operatorer
 
 operatorer er ting du stiller ind i et if statement.
 F.eks.
@@ -27,3 +27,5 @@ if(jonas %= kim){
 //her er %= operatoren
 }
 Der er så mange forskellige operatorer at jeg ikk gider forklare allesammen
+
+
